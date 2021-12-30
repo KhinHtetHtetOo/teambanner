@@ -1,0 +1,74 @@
+*{
+	margin: 0;
+	padding: 0;
+
+}
+
+section{
+
+  min-height: 100vh;  
+
+  /*background: #333;*/
+
+  position: relative;
+}
+.banners{
+	width: 100%;
+	height: 100%;
+	/*background-color: #000;*/
+
+	/*display: flex;
+	flex-wrap: wrap;*/
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	overflow: hidden;
+}
+
+
+.banners .blocks{
+  display: block;
+
+  width: 5vw;
+  height: 5vh;
+  /*background-color: #000;*/
+
+  animation: myani 0.5s ease-in-out forwards;
+}
+.banners .blocks:nth-child(even){
+  animation: myani 1s ease-in-out forwards;
+}
+.banners .blocks:nth-child(7n+3){
+  animation: myani 2.5s ease-in-out forwards;
+
+}
+.banners .blocks:nth-child(7n+7){
+  animation: myani 1.5s ease-in-out forwards;
+
+}
+
+@keyframes myani{
+	0%{
+         opacity: 0;
+         transform: scale(0) translateY(1000px);
+	}
+	50%{
+		opacity: 0;
+        background:url('../img/teambanner.png');
+		background-position: center;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	100%{
+        opacity: 1;
+        transform: scale(1) translateY(0px);
+        background:url('../img/teambanner.png');
+		background-position: center;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
